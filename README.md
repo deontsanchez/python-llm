@@ -45,8 +45,8 @@ python-llm/
 1. Clone this repository:
 
 ```bash
-git clone <your-repo-url>
-cd <repo-folder>
+git clone https://github.com/deontsanchez/python-llm.git
+cd python-llm
 ```
 
 2. Create and activate a virtual environment:
