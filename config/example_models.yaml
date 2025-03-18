@@ -1,0 +1,55 @@
+# Example model configuration file
+# Copy this file and remove the 'example_' prefix to use it
+
+# Default models
+default_models:
+  chat: 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'
+  text_generation: 'facebook/opt-350m'
+
+# Recommended models by size
+small_models:
+  - name: 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'
+    parameters: '1.1B'
+    type: 'chat'
+    description: 'Small but capable chat model'
+  - name: 'facebook/opt-125m'
+    parameters: '125M'
+    type: 'text-generation'
+    description: 'Very lightweight model, good for testing'
+  - name: 'facebook/opt-350m'
+    parameters: '350M'
+    type: 'text-generation'
+    description: 'Slightly larger model with better capabilities'
+
+medium_models:
+  - name: 'facebook/opt-1.3b'
+    parameters: '1.3B'
+    type: 'text-generation'
+    description: 'Good balance between size and performance'
+  - name: 'stabilityai/stablelm-3b-4e1t'
+    parameters: '3B'
+    type: 'text-generation'
+    description: 'Multi-purpose language model'
+
+# Generation parameters
+generation_presets:
+  creative:
+    temperature: 0.9
+    top_p: 0.95
+    repetition_penalty: 1.1
+  balanced:
+    temperature: 0.7
+    top_p: 0.9
+    repetition_penalty: 1.2
+  precise:
+    temperature: 0.5
+    top_p: 0.85
+    repetition_penalty: 1.3
+
+# Fine-tuning defaults
+fine_tuning:
+  default_dataset: 'imdb'
+  epochs: 3
+  batch_size: 4
+  learning_rate: 5.0e-5
+  max_length: 512
