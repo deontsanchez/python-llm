@@ -182,7 +182,3 @@ default_chat_model = config['default_models']['chat']
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributing
-
-[Your contribution guidelines]
